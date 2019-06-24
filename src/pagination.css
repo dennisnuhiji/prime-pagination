@@ -1,0 +1,37 @@
+.pagination{
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08);
+}
+
+.pageButton{
+    background-color: #ffffff;
+    display: none;
+    padding: 0 15px;
+    text-align: center;
+    height: 100%;
+    font-size: 25px;
+    color: #919191;
+}
+
+.pageButton:hover{
+    background-color: #eceaea;
+}
+.pageButton.current{
+    background-color: #0275d8;
+    border-radius: .25rem;
+    color: #ffffff;
+}
+
+.pageButton.visible{
+    display: inline-block;
+}
+
+.pageButton:first-child, .pageButton:last-child{
+    border-radius: .25rem;
+}
+.pageButton:not(:first-child):not(:last-child) {
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+ }
