@@ -1,6 +1,6 @@
 {
     "name": "prime-pagination",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "description": "Pagination component",
     "main": "./lib/Pagination.js",
     "types": "./lib/Pagination.d.ts",

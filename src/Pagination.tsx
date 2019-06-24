@@ -38,13 +38,13 @@ export default class Pagination extends React.Component<Props, State> {
             lastPageCondition = currentPage != totalPages
         return (
             <div className="pagination">
-                {firstPage && firstPageCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(1)}><i className="far fa-step-backward" /></div>}
-                {skipBackward && skipBackwardCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(currentPage - 3)}><i className="far fa-backward" /></div>}
-                {previousPage && previousPageCondition && <div className="pageButton visible" style={style} onClick={this.goToPreviousPage}><i className="far fa-chevron-left" /></div>}
+                {firstPage && firstPageCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(1)}><i className="fas fa-step-backward" /></div>}
+                {skipBackward && skipBackwardCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(currentPage - 3)}><i className="fas fa-backward" /></div>}
+                {previousPage && previousPageCondition && <div className="pageButton visible" style={style} onClick={this.goToPreviousPage}><i className="fas fa-chevron-left" /></div>}
                 {this.getPagesButtons()}
-                {nextPage && nextPageCondition && <div className="pageButton visible" style={style} onClick={this.goToNextPage}><i className="far fa-chevron-right" /></div>}
-                {skipForward && skipForwardCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(currentPage + 3)}><i className="far fa-forward" /></div>}
-                {lastPage && lastPageCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(totalPages)}><i className="far fa-step-forward" /></div>}
+                {nextPage && nextPageCondition && <div className="pageButton visible" style={style} onClick={this.goToNextPage}><i className="fas fa-chevron-right" /></div>}
+                {skipForward && skipForwardCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(currentPage + 3)}><i className="fas fa-forward" /></div>}
+                {lastPage && lastPageCondition && <div className="pageButton visible" style={style} onClick={() => this.goToPage(totalPages)}><i className="fas fa-step-forward" /></div>}
             </div>)
     }
 
