@@ -4,6 +4,7 @@ import './pagination.css'
 type Props = {
     totalPages: number,
     pageChange: (pageNumber: number) => void,
+    displayPages?: number,
     nextPage?: boolean,
     previousPage?: boolean,
     firstPage?: boolean,
@@ -65,13 +66,18 @@ export default class Pagination extends React.Component<Props, State> {
 
     isPageVisible = (i: number): boolean => {
         const { currentPage } = this.state
+        const { totalPages } = this.props
+        const displayPages = this.props.displayPages || 3
+        const leftSidePages = displayPages % 2 == 0 ? (displayPages / 2) - 1 : displayPages / 2
+        const rightSidePages = displayPages / 2;
+
         if (i === currentPage)
             return true
-        if (currentPage === 1 && (currentPage + 1 === i || currentPage + 2 === i))
+        if (currentPage < (displayPages / 2) && i <= displayPages)
             return true
-        if (currentPage === this.props.totalPages && (currentPage - 1 === i || currentPage - 2 === i))
+        if (currentPage > totalPages - (displayPages / 2) && i >= totalPages - (displayPages - 1))
             return true
-        if (currentPage + 1 === i || currentPage - 1 === i)
+        if ((i > currentPage && i <= currentPage + rightSidePages) || (i < currentPage && i >= currentPage - leftSidePages))
             return true
 
         return false

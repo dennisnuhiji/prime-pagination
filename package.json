@@ -1,6 +1,6 @@
 {
     "name": "prime-pagination",
-    "version": "1.1.7",
+    "version": "1.2.0",
     "description": "Pagination component",
     "main": "./lib/Pagination.js",
     "types": "./lib/Pagination.d.ts",
@@ -30,5 +30,12 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/dennisnuhiji/prime-pagination.git"
-      }
+    },
+    "keywords": [
+        "prime-pagination",
+        "pagination",
+        "custom-pagination",
+        "simple-pagination",
+        "react-pagination"
+    ]
 }

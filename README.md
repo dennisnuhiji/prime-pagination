@@ -27,7 +27,7 @@ React.render(<Pagination totalPages={6} pageChange={this.onPageChange}/>, contai
   </ul>
   
 How to add FontAwesome?<br/>
-Add the following line inside 'head' section of your HTML file:
+  Add the following line inside 'head' section of your HTML file:
 ````
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 ````
@@ -37,6 +37,8 @@ Add the following line inside 'head' section of your HTML file:
 totalPages: number; // total amount of pages
 
 pageChange: (pageNumber: number) => void; // callback function triggered after page change
+
+displayPages?: number; // number of pages to be displayed in the pagination bar (default is 3)
 
 nextPage?: boolean; // next page button(appears only when there is next page)
 
